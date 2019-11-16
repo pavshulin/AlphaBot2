@@ -16,17 +16,17 @@ try:
 	while True:
 		DR_status = GPIO.input(DR)
 		DL_status = GPIO.input(DL)
-#		print(DR_status,DL_status)
+		print(DR_status,DL_status)
 		if((DL_status == 0) or (DR_status == 0)):
 			Ab.left()
 			#Ab.right()
 			time.sleep(0.002)
 			Ab.stop()
-		#	print("object")
+			print("object")
 		else:
 			Ab.forward()
-		#	print("forward")
+			print("forward")
 
 except KeyboardInterrupt:
-	GPIO.cleanup();
+	GPIO.cleanup()
 
